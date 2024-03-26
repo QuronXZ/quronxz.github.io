@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>word count test</title>
+    <script src="./index.js" type="text/javascript"></script>
+</head>
+<body style="display: flex;flex-direction: column;height: 98dvh;">
+    <dialog>
+        <h1>Enter your word count goal:</h1>
+        <input type="number" name="goal" id="goal" min="10" max="10000">
+        <button onclick="setGoal()">Submit</button>
+    </dialog>
+    <canvas style="flex:1"></canvas>
+    <div id="finalGoal" >Your final goal: <span id="finalvalue">0</span><button onclick="editGoal()">edit goal</button></div>
+    <div id="remainingArea">Remaining count: <span id="remainingcount">0</span></div>
+    <div id="bonusArea" style="display: none;">Bonus words count: <span id="bonusword">0</span></div>
+    <textarea style="flex:2" name="main" id="main" cols="80" rows="30" ></textarea>
+</body>
+</html>
