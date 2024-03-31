@@ -1,0 +1,281 @@
+:root {
+  /*old colors
+  --black: rgb(35, 35, 35);
+  --brown: brown;
+  --dark-brown:rgb(89, 21, 21);
+  */
+
+  /*new colors for samurai*/
+  --black:#2b201e;
+  --brown: #682820 /*#d05048*/	;
+  --dark-brown: #d05048 /*#682820*/;
+  --yellow-bg:	#f0d8a8;
+  --health-full: /*#305870*/ #3878b0;
+  --health_bg: #b03010	;
+  --overall_bg: #305870;
+
+}
+
+@font-face {
+  font-family: "samurai-font";
+  src: url(/img/samurai-blast-font/SamuraiBlast.ttf);
+}
+
+
+.alert{
+  padding: 20px;
+  background-color: #f44336; /* Red */  /*Alertbox maybe put in another html file */
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+#stickyNotification {
+  z-index: 999999999999;
+  position: absolute;
+  top: 90vh;
+  left: 77vw;
+  padding: 5px;
+  display: block;
+  position: absolute;
+  width: 290px;
+  height: fit-content;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(27, 27, 27);
+  background-color: rgb(0, 145, 0);
+  right: 10px;
+  bottom: 10px;
+}
+#closeBtn{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  background:transparent;
+  outline:none;
+  border: none;
+}
+#stickyNotification #closeBtn:hover {
+  color: white;
+  cursor: pointer;
+}
+textarea {
+  /*background: url(/img/notebook.png);
+
+  background-repeat: repeat-y;
+  background-size: contain;*/
+  background-color: var(--yellow-bg);
+  height: 100%;
+  width: 100%; 
+  font-family: Calibri, sans-serif;
+  font-size: 14pt ;
+  line-height: 32px;
+  padding: 2px 10px;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 98dvh;
+  font-family: "samurai-font";
+  /*background-color: rgb(58, 58, 58);*/
+  background-color: var(--overall_bg);
+  /*color:var(--black);*/
+}
+
+dialog {
+  z-index: 5;
+  border: none;
+  border-radius: 5%;
+  height: 300px;
+  /* background: url(/img/pixels.png); */
+  background-color: var(--yellow-bg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px;
+  color:var(--black)
+}
+
+#goal{
+  background: var(--yellow-bg);
+  width: 30%;
+  height: 15%;
+  padding: 0.5%;
+  margin:10%;
+  outline: none;
+  border: none;
+  border-bottom: 5px solid var(--brown);
+  border-radius: 3%;
+  text-align: center;
+  color: var(--brown);
+  font-size: 300%;
+  font-family: "samurai-font";
+  appearance: textfield;
+  margin: 0;
+  &::-webkit-inner-spin-button {
+    opacity: 1;
+    background: red;
+  }
+}
+
+.healthContainer {
+  border-radius: 5%;
+  position: relative;
+  height:20px;
+  width: 70%;
+  border: 4px solid var(--brown);
+  background-color: var(--health_bg);
+  
+}
+.healthReduced {
+  background-color: var(--black);
+  
+}
+.content {
+  color:var(--brown);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.boardLine {
+  color:var(--brown);
+  text-align: center;
+  margin: 0 7%;
+}
+
+.iconButton {
+  /*height: 40%;
+  width: 35%;*/
+  height: 30%;
+  width: 22.5%;
+  padding: 2%;
+  border-radius: 50%;
+  color: var(--brown);
+  font-family: "samurai-font";
+  font-size: 200%;
+  border: 5px solid ;
+  background-color: var(--dark-brown);
+}
+.iconImage {
+  padding: 0;
+  margin: 0;
+  height: 50%;
+  color:var(--dark-brown);
+}
+
+#enemyHealth {
+  border-radius: 5%;
+  position: absolute;
+  background: var(--yellow-bg);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+#playerHealth {
+  border-radius: 5%;
+  position: absolute;
+  background: #818cf8;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+#saveGoal {
+  padding: 2%;
+  border-radius: 10%;
+  color: var(--brown);
+  /*color: blue;*/
+  font-family: "samurai-font";
+  font-size: 200%;
+  /* font-size: 20px; */
+  border: 5px solid var(--brown);
+  /*border: 5px solid blue;*/
+  background-color: var(--dark-brown);
+}
+#saveGoal:hover {
+  padding:2%;
+  border: 5px solid var(--brown);
+  font-size: 200%;
+  border: 5px solid rgb(58, 58, 58);
+  background-color: var(--health-full);
+}
+
+#writingBoard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-top: 15px;
+  margin-left: 5px;
+  padding: 1% 4%;
+  background-color: var(--overall_bg);
+}
+#sideBar {
+  height: 100%;
+  width: 20%;
+  margin: 10px;
+}
+#scoreBoard {
+  height: 40%;
+  width: 100%;
+  font-size: 130%;
+  border-radius: 5%;
+  background-color: var(--yellow-bg);
+  /* background: url(/img/pixels.png); */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 1 1 0;
+}
+#buttons {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
+#notebookCover {
+  padding: 10px;
+  background-color: var(--brown);
+  width: 100%;
+  flex: 5 1 0;
+  height: 100%;
+  display: flex;
+  border-radius: 15px;
+}
+
+#remainingcount,
+#finalvalue,
+#bonusword {
+  font-size: 200%;
+}
