@@ -125,12 +125,12 @@ c.fillRect(0, 0, canvas.width, canvas.height);
 
 const gravity = 0;
 
-const background = new Sprite({
+const backgroun_d = new Sprite({
   position: {
     x: 0,
     y: -275
   },
-  imageSrc: './img/background.png'
+  imageSrc: './img/background_1.png'
 });
 
 /*const background_lamp = new Sprite({
@@ -274,7 +274,7 @@ function animate() {
   ///////c.fillStyle = "rgb(85, 119, 157)"; //new_blue
   //c.fillstyle = "rgb(56, 120, 176)";
   ///////c.fillRect(0, 0, canvas.width, canvas.height);
-  background.update();
+  backgroun_d.update();
   //background_lamp.update();
   // shop.update();
   c.fillStyle ="#EDE9D0"; //"#305870" ; //"#6088b0 Color on canvas in Samurai improved UI";
